@@ -53,6 +53,7 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxkotlin:2.4.0'
     implementation 'com.jakewharton.rxrelay2:rxrelay:2.1.1'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.google.android.material:material:1.2.0'
 
     // Koin
     def koinVersion = "2.0.1"
