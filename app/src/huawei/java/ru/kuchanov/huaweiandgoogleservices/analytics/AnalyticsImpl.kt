@@ -8,6 +8,6 @@ class AnalyticsImpl(context: Context) : Analytics {
     private val huaweiAnalytics = HiAnalytics.getInstance(context)
 
     override fun send(event: AnalyticsEvent) {
-        huaweiAnalytics.logEvent(event.key, event.data.toBundle())
+        huaweiAnalytics.onEvent(event.key, event.data.toBundle())
     }
 }
