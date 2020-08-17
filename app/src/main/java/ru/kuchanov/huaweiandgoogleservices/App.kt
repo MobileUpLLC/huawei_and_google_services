@@ -4,6 +4,7 @@ import android.app.Application
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 import ru.kuchanov.huaweiandgoogleservices.di.AppModule
+import ru.kuchanov.huaweiandgoogleservices.di.SystemModule
 
 class App : Application() {
 
@@ -12,7 +13,7 @@ class App : Application() {
 
         startKoin {
             androidContext(this@App)
-            modules(AppModule.create())
+            modules(listOf(AppModule.create(), SystemModule.create()))
         }
     }
 }
