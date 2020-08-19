@@ -105,10 +105,10 @@ class MapFragment : Fragment() {
 
         locationGateway.requestLastLocation()
             .flatMap { mapMarkersGateway.getMapMarkers(it) }
-            .subscribeBy { officeItemList ->
+            .subscribeBy { itemList ->
                 pinItemSelected = map.addMarkers(
                     requireContext(),
-                    officeItemList.map { it },
+                    itemList.map { it },
                     {
                         onMarkerSelected(it)
                         true
