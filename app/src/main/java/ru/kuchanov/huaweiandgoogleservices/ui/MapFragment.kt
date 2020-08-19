@@ -35,7 +35,7 @@ class MapFragment : Fragment() {
 
     private val locationGateway: LocationGateway by inject()
 
-    private val mapMaGateway: MapMarkersGateway by inject()
+    private val mapMarkersGateway: MapMarkersGateway by inject()
 
     private var deviceLocationMarker: SomeMarker? = null
 
@@ -104,7 +104,7 @@ class MapFragment : Fragment() {
         }
 
         locationGateway.requestLastLocation()
-            .flatMap { mapMaGateway.getMapMarkers(it) }
+            .flatMap { mapMarkersGateway.getMapMarkers(it) }
             .subscribeBy { officeItemList ->
                 pinItemSelected = map.addMarkers(
                     requireContext(),
