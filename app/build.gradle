@@ -67,9 +67,10 @@ dependencies {
     huaweiImplementation 'com.huawei.hms:maps:4.0.1.302'
 
     // google services
-    googleImplementation 'com.google.android.gms:play-services-location:17.0.0'
-    googleImplementation 'com.google.maps.android:android-maps-utils-sdk-v3-compat:0.1'
     googleImplementation 'com.google.firebase:firebase-analytics:17.4.4'
+    googleImplementation 'com.google.android.gms:play-services-location:17.0.0'
+    googleImplementation 'com.google.android.gms:play-services-maps:17.0.0'
+    googleImplementation 'com.google.maps.android:android-maps-utils:1.3.1'
 
     // RxPermissions
     implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
