@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.kuchanov.huaweiandgoogleservices">
+
+    <application tools:ignore="AllowBackup">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="PROVIDE HERE YOU GOOGLE API KEY FOR MAPS FROM GOOGLE CLOUD CONSOLE" />
+    </application>
+</manifest>
