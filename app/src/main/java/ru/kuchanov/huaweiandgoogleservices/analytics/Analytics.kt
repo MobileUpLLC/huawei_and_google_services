@@ -39,4 +39,6 @@ open class ParamsEvent(key: String, vararg params: Pair<String, Any>): SimpleEve
     override val data = params.toMap()
 }
 
-class EventOpenSomeScreen : SimpleEvent("screen_some_screen")
+class EventOpenMainScreen : SimpleEvent("screen_main")
+
+class EventOpenMapScreen : SimpleEvent("screen_map")
