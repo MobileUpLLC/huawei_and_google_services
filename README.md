@@ -30,9 +30,7 @@ You need to create accounts in Huawei and Google, enable services in developer c
 
 Choose one of flavor `huawei` or `google` and see how it works!
 
-Huawei maps with markers:
+Huawei and Google maps with markers:
 
 ![Huawei maps with markers](/img/huawei-maps.png)
-
-Google maps with markers
 ![Google maps with markers](/img/google-maps.png)
