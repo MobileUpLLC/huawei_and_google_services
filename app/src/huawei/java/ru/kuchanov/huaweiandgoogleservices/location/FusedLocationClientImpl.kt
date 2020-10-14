@@ -21,10 +21,10 @@ class FusedLocationClientImpl(
 
     override fun checkPermissions(): Single<Boolean> {
         val permissions = mutableListOf(Manifest.permission.ACCESS_FINE_LOCATION)
-        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.P) {
-            // for huawei we need this permission too after API=28
-            permissions += Manifest.permission.ACCESS_BACKGROUND_LOCATION
-        }
+        // Add this permission too after API=28 if you want to receive location in background
+        // if (Build.VERSION.SDK_INT > Build.VERSION_CODES.P) {
+        //     permissions += Manifest.permission.ACCESS_BACKGROUND_LOCATION
+        // }
         return permissionsHelper.requestPermission(*permissions.toTypedArray())
     }
 

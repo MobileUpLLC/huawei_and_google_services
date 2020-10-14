@@ -20,7 +20,12 @@ class FusedLocationClientImpl(
     private val fusedLocationClient = LocationServices.getFusedLocationProviderClient(context)
 
     override fun checkPermissions(): Single<Boolean> {
-        return permissionsHelper.requestPermission(Manifest.permission.ACCESS_FINE_LOCATION)
+        val permissions = mutableListOf(Manifest.permission.ACCESS_FINE_LOCATION)
+        // Add this permission too after API=28 if you want to receive location in background
+        // if (Build.VERSION.SDK_INT > Build.VERSION_CODES.P) {
+        //     permissions += Manifest.permission.ACCESS_BACKGROUND_LOCATION
+        // }
+        return permissionsHelper.requestPermission(*permissions.toTypedArray())
     }
 
     @SuppressLint("MissingPermission")
